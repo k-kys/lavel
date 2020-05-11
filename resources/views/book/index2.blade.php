@@ -26,7 +26,10 @@
             <div>
                 @include('partials.modal')
             </div>
-
+<br>
+            <div>
+                <a href="{{ route('book.create') }}" class="btn btn-primary">Add new Book</a>
+            </div>
 
             <table class="table table-striped table-hover">
                 <thead>
@@ -63,6 +66,17 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        $('.btn-delete').click(function (event){
+            let isDelete = confirm('Do you want to delete this book ?');
+            if (!isDelete) {
+                event.preventDefault();
+            }
+        })
+    });
+</script>
 
 @endsection
 

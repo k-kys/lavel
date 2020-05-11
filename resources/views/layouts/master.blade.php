@@ -10,14 +10,15 @@
 <script src="//code.jquery.com/jquery.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-{{-- title lấy từ file content --}}
 @yield('meta')
+{{-- title lấy từ file content --}}
+
 
 <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
 <style>
     footer{
-        background: rgb(59, 147, 206);
+        background: rgb(176, 219, 248);
         margin-top: 5px;
     }
 </style>

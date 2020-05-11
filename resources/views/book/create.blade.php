@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('meta')
+    <title>Tạo mới sách</title>
+@endsection
 @section('content')
 <div class="container">
     <div class="row">
@@ -8,7 +11,7 @@
                 @csrf
                 <legend>Create new book</legend>
 
-                {{ Auth::id() }}
+                {{-- {{ Auth::id() }} --}}
 
                 <div class="form-group">
                     <label for="">Name</label>
@@ -36,7 +39,7 @@
 
 
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Create</button>
             </form>
 
         </div>

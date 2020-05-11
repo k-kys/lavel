@@ -27,29 +27,29 @@ Route::get('register', 'AuthController@getRegister');
 Route::post('register', 'AuthController@register')->name('register');
 
 // Products Route with Restfull
-// Route::get('product', 'ProductController@index')->name('product.index');
-// Route::get('product/create', 'ProductController@create')->name('product.create');
-// Route::get('product/edit/{id}', 'ProductController@edit')->name('product.edit');
-// Route::get('product/{id}', 'ProductController@show')->name('product.show');
+Route::get('product', 'ProductController@index')->name('product.index');
+Route::get('product/create', 'ProductController@create')->name('product.create');
+Route::get('product/{id}/edit', 'ProductController@edit')->name('product.edit');
+Route::get('product/{id}', 'ProductController@show')->name('product.show');
 
-// Route::post('product', 'ProductController@store')->name('product.store');
+Route::post('product', 'ProductController@store')->name('product.store');
 
-// Route::put('product/{id}', 'ProductController@update')->name('product.update');
+Route::put('product/{id}', 'ProductController@update')->name('product.update');
 
-// Route::delete('product/{id}', 'ProductController@destroy')->name('product.destroy');
+Route::delete('product/{id}', 'ProductController@destroy')->name('product.destroy');
 
 
 // Restful
 Route::get('books/dashboard', 'BookController@dashboard')->name('book.dashboard')->middleware('check_has_book');
 
 // Route::get('books2', 'BookController@index2')->name('book.index2')->middleware('auth');
-Route::get('books2', [
-    'as' => 'book.index2',
-    'uses' => 'BookController@index2',
+Route::get('books', [
+    'as' => 'book.index',
+    'uses' => 'BookController@index',
     'middleware' => ['auth'],
 ]);
 
-Route::get('books', 'BookController@index')->name('book.index');
+// Route::get('books', 'BookController@index')->name('book.index');
 Route::get('books/create', 'BookController@create')->name('book.create');
 Route::get('books/{id}/edit', 'BookController@edit')->name('book.edit');
 Route::get('books/{id}', 'BookController@show')->name('book.show');
@@ -58,7 +58,7 @@ Route::post('books', 'BookController@store')->name('book.store');
 
 Route::put('books/{id}', 'BookController@update')->name('book.update');
 
-Route::delete('books/{id}/delete', 'BookController@destroy')->name('book.destroy');
+Route::get('books/{id}/delete', 'BookController@destroy')->name('book.destroy');
 
 // tạo bản ghi trong Authors
 // Route::get('test', function(){

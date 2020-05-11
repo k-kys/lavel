@@ -29,13 +29,13 @@ class BookController extends Controller
         return view('book.dashboard', compact('totalBook'));
     }
 
-    public function index()
-    {
-        $books = Book::all();
-        return view('book.index', compact('books'));
-    }
+    // public function index()
+    // {
+    //     $books = Book::all();
+    //     return view('book.index', compact('books'));
+    // }
 
-    public function index2(Request $request)
+    public function index(Request $request)
     {
         // if (!Auth::check()) {
         //     return redirect()->route('login');
@@ -49,7 +49,7 @@ class BookController extends Controller
             });
         }
         // $books = $query->get();
-        $books = $query->orderBy('id', 'desc')->paginate(1);
+        $books = $query->orderBy('id', 'desc')->paginate(3);
         return view('book.index2', compact('books'));
     }
 

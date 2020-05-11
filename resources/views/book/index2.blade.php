@@ -5,14 +5,14 @@
 @push('css')
     <style>
         body{
-            background: rgb(186, 206, 193);
+            background: rgb(231, 235, 232);
         }
     </style>
 @endpush
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <form action="" method="GET" class="form-inline" role="form">
 
                 <div class="form-group">
@@ -36,6 +36,7 @@
                         <th>Author</th>
                         <th>Category</th>
                         <th>Create at</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,6 +51,10 @@
                                 @endforeach
                             </td>
                             <td>{{ $book->created_at->format('d/m/Y H:i:s') }}</td>
+                            <td>
+                                <a href="{{ route('book.edit', ['id' => $book->id]) }}" class="btn btn-primary">Edit</a>
+                                <a href="{{ route('book.destroy', ['id' => $book->id]) }}" class="btn btn-danger btn-delete">Delete</a>
+                            </td>
                         </tr>
                         @endforeach
                 </tbody>

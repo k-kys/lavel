@@ -61,29 +61,33 @@ Route::put('books/{id}', 'BookController@update')->name('book.update');
 Route::get('books/{id}/delete', 'BookController@destroy')->name('book.destroy');
 
 // tạo bản ghi trong Authors
-// Route::get('test', function(){
-//     $author = new \App\Author;
-//     $author->name = "Văn Cao";
-//     $author->gender = 1;
-//     $author->save();
-// });
+Route::get('test', function(){
+    $author = new \App\Author;
+    $author->name = "Văn Cao";
+    $author->gender = 1;
+    $author->save();
+    $author = new \App\Author;
+    $author->name = "Jieng Kyong";
+    $author->gender = 2;
+    $author->save();
+    $author = new \App\Author;
+    $author->name = "Fujiko Fujio";
+    $author->gender = 1;
+    $author->save();
+});
 // tạo 3 bản ghi trong Categories
-// Route::get('test2', function(){
-//     $cate = new \App\Category;
-//     $cate->name = "Truyện tranh";
-//     $cate->save();
-//     $cate = new \App\Category;
-//     $cate->name = "Truyện cười";
-//     $cate->save();
-//     $cate = new \App\Category;
-//     $cate->name = "Truyện tiểu thuyết";
-//     $cate->save();
-// });
+Route::get('test2', function(){
+    $cate = new \App\Category;
+    $cate->name = "Truyện tranh";
+    $cate->save();
+    $cate = new \App\Category;
+    $cate->name = "Truyện cười";
+    $cate->save();
+    $cate = new \App\Category;
+    $cate->name = "Truyện tiểu thuyết";
+    $cate->save();
+});
 
-
-// Route::get('test-config', function ($id) {
-//     dd(config('app.name'));
-// });
 
 Route::get('test-config', function () {
     dd(config('book.status.pending'));

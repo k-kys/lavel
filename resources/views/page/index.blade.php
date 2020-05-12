@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-    <link rel="shortcut icon" type="image/x-icon" href="https://3.bp.blogspot.com/-CDCshI-x_kc/XpnZ-iXhVdI/AAAAAAAAB9k/zjgTVh8LvqMs6VVXuSZeAwlF9cR_zHcsACK4BGAYYCw/s1600/tqk-dragon2.jpg">
-	<title>Index</title>
-	<!-- Latest compiled and minified CSS & JS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<script src="//code.jquery.com/jquery.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-</head>
-<body>
+
+@extends('layouts.master')
+@section('meta')
+    <title>Page index</title>
+@endsection
+@section('content')
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
@@ -32,5 +26,5 @@
 			</div>
 		</div>
 	</div>
-</body>
-</html>
+
+@endsection

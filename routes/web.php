@@ -42,12 +42,12 @@ Route::delete('product/{id}', 'ProductController@destroy')->name('product.destro
 // Restful
 Route::get('books/dashboard', 'BookController@dashboard')->name('book.dashboard')->middleware('check_has_book');
 
-// Route::get('books2', 'BookController@index2')->name('book.index2')->middleware('auth');
-Route::get('books', [
-    'as' => 'book.index',
-    'uses' => 'BookController@index',
-    'middleware' => ['auth'],
-]);
+Route::get('books', 'BookController@index')->name('book.index')->middleware('auth');
+// Route::get('books', [
+//     'as' => 'book.index',
+//     'uses' => 'BookController@index',
+//     'middleware' => ['auth'],
+// ]);
 
 // Route::get('books', 'BookController@index')->name('book.index');
 Route::get('books/create', 'BookController@create')->name('book.create');

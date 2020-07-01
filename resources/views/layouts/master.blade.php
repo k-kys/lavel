@@ -13,7 +13,7 @@
 @yield('meta')
 {{-- title lấy từ file content --}}
 
-
+{{-- link của select2 --}}
 <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
 <style>
@@ -73,14 +73,7 @@
 </main>
 
 <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10">
-                <h1>My application</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid eius laborum voluptatibus sequi. Consequuntur odit perferendis illum vitae reprehenderit accusantium, voluptates magni assumenda a, porro adipisci non quo blanditiis error!</p>
-            </div>
-        </div>
-    </div>
+    @yield('footer')
 </footer>
 
 

@@ -96,7 +96,7 @@ class ProductController extends Controller
     public function show($id)
     {
         $products = DB::table('products')->where('id', $id)->get();
-        dd($products);
+        // dd($products);
         return view('product.index', compact('products'));
     }
 
